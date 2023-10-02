@@ -26,7 +26,7 @@ class SessionsController < ApplicationController
   end
 
   def create_token_store
-    Google::Auth::Stores::RedisTokenStore.new(redis: Redis.new)
+    Google::Auth::Stores::RedisTokenStore.new(redis: Redis::Objects.redis)
   end
 
   def authorizer
