@@ -1,2 +1,2 @@
-class Api::ProjectVersionsController < ApplicationController
+class Api::ProjectVersionsController < Api::BaseController
 end

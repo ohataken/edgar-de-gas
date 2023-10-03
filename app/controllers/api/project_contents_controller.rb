@@ -1,2 +1,2 @@
-class Api::ProjectContentsController < ApplicationController
+class Api::ProjectContentsController < Api::BaseController
 end
