@@ -7,5 +7,13 @@ Rails.application.routes.draw do
     get :callback, on: :collection
   end
 
+  namespace :api do
+    resources :projects, only: [:show] do
+      resources :project_contents, only: [:index, :show, :update], path: "contents"
+      resources :project_deployments, only: [:index, :create, :show, :update, :destroy], path: "deployments"
+      resources :project_versions, only: [:index], path: "versions"
+    end
+  end
+
   root "pages#root"
 end
