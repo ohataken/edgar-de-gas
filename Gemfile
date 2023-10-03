@@ -40,6 +40,7 @@ gem "sassc-rails"
 # gem "image_processing", "~> 1.2"
 
 gem 'googleauth'
+gem 'google-apis-script_v1'
 gem 'redis-objects', '>= 2.0.0.beta'
 gem 'bulma-rails', '~> 0.9.4'
 
