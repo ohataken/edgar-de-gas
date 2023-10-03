@@ -55,4 +55,8 @@ class ApplicationToken
   def delete
     token_store.delete(@key)
   end
+
+  def credentials
+    authorizer.get_credentials(@key)
+  end
 end
