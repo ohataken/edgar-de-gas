@@ -1,6 +1,12 @@
 class ApplicationToken
   attr_reader :key, :token
 
+  def self.find key
+    token = ApplicationToken.new key
+    token.load
+    token
+  end
+
   def initialize key = ""
     @key = key
   end
