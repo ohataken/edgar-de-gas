@@ -5,6 +5,31 @@
       <p>
         Utilities for Google Apps Script
       </p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="content">
+      <h2><%= @project.title %></h2>
+      <p>
+        <%= @project.script_id %>
+      </p>
+      <p>
+        <%= link_to 'show', project_path(@project.script_id, key: params[:key]) %>
+        <%= link_to 'contents', project_project_contents_path(@project.script_id, key: params[:key]) %>
+      </p>
+      <p>
+        creater: <%= @project.creator.name %>, <%= @project.creator.email %>
+      </p>
+      <p>
+        create_time: <%= @project.create_time %>
+      </p>
+      <p>
+        update_time: <%= @project.update_time %>
+      </p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="content">
       <p class="is-family-code">
         <%= @project.inspect %>
       </p>

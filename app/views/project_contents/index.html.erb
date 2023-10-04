@@ -5,6 +5,21 @@
       <p>
         Utilities for Google Apps Script
       </p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="content">
+      <p>
+        <%= link_to 'show', project_path(@contents.script_id, key: params[:key]) %>
+        <%= link_to 'contents', project_project_contents_path(@contents.script_id, key: params[:key]) %>
+      </p>
+      <% @contents.files.each do |file| %>
+        <pre><%= file.source %></pre>
+      <% end %>
+    </div>
+  </section>
+  <section class="section">
+    <div class="content">
       <p class="is-family-code">
         <%= @contents.inspect %>
       </p>
